@@ -10,43 +10,45 @@ class MainDesktop extends StatelessWidget {
     final screenWidth = screenSize.width;
     final screenHeight = screenSize.height;
 
-    return     Container(
-                margin: EdgeInsets.symmetric(horizontal: 20.0),
-                height: screenHeight / 1.2,
-                constraints: const BoxConstraints(maxHeight: 350.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        //Intro Message
-                        const Text(
-                          "Olá, \nMeu nome é Julio\n Este é meu portifólio em Flutter",
-                          style: TextStyle(
-                            fontSize: 30,
-                            height: 1.5,
-                            fontWeight: FontWeight.bold,
-                            color: CustomColor.whitePrimary,
-                          )
-                        ),
-                        const SizedBox(height: 15),
-                        SizedBox(
-                          width: 250,
-                          child: ElevatedButton(
-                            onPressed: () {},
-                            child: const Text("Contate-me"),
-                          ),
-                        ),
-                      ],
-                    ),
-                    Image.asset(
-                      "assets/images/julio.png",
-                      width: screenWidth / 2,
-                      height: 300,
-                    ),
-                  ],
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: 20.0),
+      height: screenHeight / 1.2,
+      constraints: const BoxConstraints(maxHeight: 350.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment:
+                CrossAxisAlignment.start, // <-- Adicione esta linha
+            children: [
+              //Intro Message
+              const Text(
+                "Olá, \nMeu nome é Julio\n Este é meu portifólio em Flutter",
+                style: TextStyle(
+                  fontSize: 30,
+                  height: 1.5,
+                  fontWeight: FontWeight.bold,
+                  color: CustomColor.whitePrimary,
                 ),
-              );
+              ),
+              const SizedBox(height: 15),
+              SizedBox(
+                width: 250,
+                height: screenHeight / 18,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: const Text("Contate-me"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: CustomColor.bluePrimary,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Image.asset("assets/boy.png", width: screenWidth / 2, height: 300),
+        ],
+      ),
+    );
   }
 }

@@ -11,7 +11,7 @@ class MainMobile extends StatelessWidget {
     final screenHeight = screenSize.height;
 
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 40.0, vertical: 30.0),
+      margin: EdgeInsets.symmetric(vertical: 30.0),
       height: screenHeight,
       constraints: BoxConstraints(minHeight: 560.0),
       child: Column(
@@ -29,7 +29,7 @@ class MainMobile extends StatelessWidget {
               ).createShader(bounds);
             },
             blendMode: BlendMode.srcATop,
-            child: Image.asset("assets/images/julio.png", width: screenWidth),
+            child: Image.asset("assets/boy.png", width: screenWidth),
           ),
           const SizedBox(height: 30.0),
           //Intro Message
@@ -45,9 +45,13 @@ class MainMobile extends StatelessWidget {
           const SizedBox(height: 15),
           SizedBox(
             width: 190,
+            height: screenHeight / 18,
             child: ElevatedButton(
               onPressed: () {},
               child: const Text("Contate-me"),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: CustomColor.bluePrimary,
+              ),
             ),
           ),
         ],
