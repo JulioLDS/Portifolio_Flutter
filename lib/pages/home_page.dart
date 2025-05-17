@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:meu_portifolio/constants/colors.dart';
 import 'package:meu_portifolio/constants/size.dart';
+import 'package:meu_portifolio/constants/skills_items.dart';
 import 'package:meu_portifolio/widgets/drawer_mobile.dart';
 import 'package:meu_portifolio/widgets/header_desktop.dart';
 import 'package:meu_portifolio/widgets/header_mobile.dart';
 import 'package:meu_portifolio/widgets/main_desktop.dart';
 import 'package:meu_portifolio/widgets/main_mobile.dart';
 import 'package:meu_portifolio/widgets/skills_desktop.dart';
+import 'package:meu_portifolio/widgets/skills_mobile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -70,8 +72,12 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                     const SizedBox(height: 50),
+
                     //plataforms and skills
-                    const SkillsDesktop(),
+                    if (constraints.maxWidth >= kMedDesktopWidth)
+                      const SkillsDesktop()
+                    else
+                      const SkillsMobile(),
                   ],
                 ),
               ),
