@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meu_portifolio/constants/colors.dart';
+import 'package:meu_portifolio/widgets/drawer_mobile.dart';
 import 'package:meu_portifolio/widgets/header_mobile.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,10 +11,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final scaffoldKey = GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       backgroundColor: CustomColor.scaffoldBg,
+      endDrawer: const DrawerMobile(),
       body: ListView(
         scrollDirection: Axis.vertical,
         children: [
@@ -21,7 +25,10 @@ class _HomePageState extends State<HomePage> {
           // HeaderDesktop(),
           HeaderMobile(
             onLogoTap: () {},
-            onMenuTap: () {}),
+            onMenuTap: () {
+              scaffoldKey.currentState?.openEndDrawer();
+            },
+          ),
           //Skills
           Container(
             height: 500,
