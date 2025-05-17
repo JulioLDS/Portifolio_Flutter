@@ -6,6 +6,7 @@ import 'package:meu_portifolio/widgets/drawer_mobile.dart';
 import 'package:meu_portifolio/widgets/header_desktop.dart';
 import 'package:meu_portifolio/widgets/header_mobile.dart';
 import 'package:meu_portifolio/widgets/main_desktop.dart';
+import 'package:meu_portifolio/widgets/main_mobile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,6 +21,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final screenWidth = screenSize.width;
+    final screenHeight = screenSize.height;
 
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -43,8 +45,10 @@ class _HomePageState extends State<HomePage> {
                     scaffoldKey.currentState?.openEndDrawer();
                   },
                 ),
-
-              const MainDesktop(),
+              if (constraints.maxWidth >= kMinDesktopWidth)
+                const MainDesktop()
+              else
+                const MainMobile(),
 
               //Skills
               Container(

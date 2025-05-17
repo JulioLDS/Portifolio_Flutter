@@ -20,6 +20,7 @@ class MainDesktop extends StatelessWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        //Intro Message
                         const Text(
                           "Olá, \nMeu nome é Julio\n Este é meu portifólio em Flutter",
                           style: TextStyle(
