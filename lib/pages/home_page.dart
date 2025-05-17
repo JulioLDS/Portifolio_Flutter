@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:meu_portifolio/constants/colors.dart';
 import 'package:meu_portifolio/constants/size.dart';
-import 'package:meu_portifolio/constants/skills_items.dart';
 import 'package:meu_portifolio/widgets/drawer_mobile.dart';
 import 'package:meu_portifolio/widgets/header_desktop.dart';
 import 'package:meu_portifolio/widgets/header_mobile.dart';
