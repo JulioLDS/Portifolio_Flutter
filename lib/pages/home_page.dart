@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:meu_portifolio/constants/colors.dart';
 import 'package:meu_portifolio/constants/size.dart';
+import 'package:meu_portifolio/utils/project_utils.dart';
 import 'package:meu_portifolio/widgets/drawer_mobile.dart';
 import 'package:meu_portifolio/widgets/header_desktop.dart';
 import 'package:meu_portifolio/widgets/header_mobile.dart';
 import 'package:meu_portifolio/widgets/main_desktop.dart';
 import 'package:meu_portifolio/widgets/main_mobile.dart';
 import 'package:meu_portifolio/widgets/project_card.dart';
+import 'package:meu_portifolio/widgets/projects_section.dart';
 import 'package:meu_portifolio/widgets/skills_desktop.dart';
 import 'package:meu_portifolio/widgets/skills_mobile.dart';
 
@@ -83,29 +85,11 @@ class _HomePageState extends State<HomePage> {
               ),
 
               //Projects
-              Container(height: 500, width: double.maxFinite),
+              const SizedBox(height: 30),
+              const ProjectsSection(),
 
               //Contact
-              Container(
-                width: screenWidth,
-                padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
-                child: Column(
-                  children: [
-                    //Work projects title
-                    const Text(
-                      "Projetos Acadêmicos",
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                        color: CustomColor.whitePrimary,
-                      ),
-                    ),
-
-                    //Work projects cards
-                    ProjectCardWidget(),
-                  ],
-                ),
-              ),
+              Container(height: 500, width: double.maxFinite),
 
               //Footer
               Container(height: 500, width: double.maxFinite),
