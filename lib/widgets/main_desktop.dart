@@ -38,9 +38,16 @@ class MainDesktop extends StatelessWidget {
                 height: screenHeight / 18,
                 child: ElevatedButton(
                   onPressed: () {},
-                  child: const Text("Contate-me"),
+                  child: const Text(
+                    "Contate-me",
+                    style: TextStyle(
+                      color: CustomColor.whitePrimary,
+                      fontSize: 16,
+                    ),
+                  ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: CustomColor.bluePrimary,
+                    backgroundColor: CustomColor.blueSecondary,
+                    padding: const EdgeInsets.symmetric(vertical: 15),
                   ),
                 ),
               ),

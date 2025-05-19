@@ -59,7 +59,10 @@ class MainMobile extends StatelessWidget {
               height: screenHeight / 18,
               child: ElevatedButton(
                 onPressed: () {},
-                child: const Text("Contate-me"),
+                child: const Text(
+                  "Contate-me",
+                  style: TextStyle(color: CustomColor.whitePrimary),
+                ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: CustomColor.bluePrimary,
                 ),

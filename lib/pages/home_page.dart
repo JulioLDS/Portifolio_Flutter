@@ -2,13 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:meu_portifolio/constants/colors.dart';
 import 'package:meu_portifolio/constants/size.dart';
-import 'package:meu_portifolio/utils/project_utils.dart';
+import 'package:meu_portifolio/widgets/contact_section.dart';
 import 'package:meu_portifolio/widgets/drawer_mobile.dart';
 import 'package:meu_portifolio/widgets/header_desktop.dart';
 import 'package:meu_portifolio/widgets/header_mobile.dart';
 import 'package:meu_portifolio/widgets/main_desktop.dart';
 import 'package:meu_portifolio/widgets/main_mobile.dart';
-import 'package:meu_portifolio/widgets/project_card.dart';
 import 'package:meu_portifolio/widgets/projects_section.dart';
 import 'package:meu_portifolio/widgets/skills_desktop.dart';
 import 'package:meu_portifolio/widgets/skills_mobile.dart';
@@ -26,7 +25,6 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final screenSize = MediaQuery.of(context).size;
     final screenWidth = screenSize.width;
-    final screenHeight = screenSize.height;
 
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -87,10 +85,10 @@ class _HomePageState extends State<HomePage> {
               //Projects
               const SizedBox(height: 30),
               const ProjectsSection(),
+              const SizedBox(height: 30),
 
               //Contact
-              Container(height: 500, width: double.maxFinite),
-
+              ContactSection(),
               //Footer
               Container(height: 500, width: double.maxFinite),
             ],
