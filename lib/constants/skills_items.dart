@@ -1,7 +1,7 @@
 const List<Map> plataformItems = [
   {"img": "assets/android_icon.png", "title": "Android Dev"},
   {"img": "assets/web_icon.png", "title": "Web Dev"},
-  {"img": "assets/ios_icon.png", "title": "IOS Dev"},
+  {"img": "assets/ios_icon.png", "title": "Designer Dev"},
   {"img": "assets/desktop_icon.png", "title": "Desktop Dev"},
 ];
 

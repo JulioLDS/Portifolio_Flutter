@@ -11,6 +11,7 @@ class ContactSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.maxFinite,
       padding: const EdgeInsets.fromLTRB(25, 20, 25, 60),
       color: CustomColor.bgLight1,
       child: Column(
@@ -44,7 +45,7 @@ class ContactSection extends StatelessWidget {
             constraints: const BoxConstraints(maxWidth: 700),
             child: CustomTextField(
               hintText: "Digite sua mensagem aqui",
-              maxLine: 20,
+              maxLine: 16,
             ),
           ),
           const SizedBox(height: 20),

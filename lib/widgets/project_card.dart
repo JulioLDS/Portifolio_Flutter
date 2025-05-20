@@ -11,7 +11,7 @@ class ProjectCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       clipBehavior: Clip.antiAlias,
-      height: 290,
+      height: 310, // antes era 290
       width: 260,
       decoration: BoxDecoration(
         color: CustomColor.bgLight2,
@@ -57,7 +57,7 @@ class ProjectCardWidget extends StatelessWidget {
             child: Row(
               children: [
                 const Text(
-                  "Avaliable on:",
+                  "Avalie em:",
                   style: TextStyle(
                     color: CustomColor.blueSecondary,
                     fontSize: 10,
