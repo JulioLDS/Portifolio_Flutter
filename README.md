@@ -29,20 +29,20 @@ Portfólio autoral desenvolvido em Flutter, com foco em dispositivos móveis. O 
 
 **📌 Telas do aplicativo**
 
-_Início:_
-![Início](images/inicio.jpeg)
+_Início:_  
+<img src="images/inicio.jpeg" alt="Início" width="300"/>
 
-_Menu:_
-![Menu](images/menu.jpeg)
+_Menu:_  
+<img src="images/menu.jpeg" alt="Menu" width="300"/>
 
-_Habilidades:_
-![Habilidades](images/habilidades.jpeg)
+_Habilidades:_  
+<img src="images/habilidades.jpeg" alt="Habilidades" width="300"/>
 
-_Projetos:_
-![Projetos](images/projetos.jpeg)
+_Projetos:_  
+<img src="images/projetos.jpeg" alt="Projetos" width="300"/>
 
-_Contato:_
-![Contato](images/contato.jpeg)
+_Contato:_  
+<img src="images/contato.jpeg" alt="Contato" width="300"/>
 
 
 🌐 **Veja a página online: https://portifolio-flutter.onrender.com**
